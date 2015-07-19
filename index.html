@@ -1,5 +1,5 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="x-ua-compatible" content="ie=edge">
@@ -16,6 +16,26 @@
 		<link rel="stylesheet" href="css/style.css">
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
+
+		<!--
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
+
+		<script src="js/plugins.js"></script>
+		<script src="js/main.js"></script>
+		-->
+
+		<!-- add fancybox -->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script src="js/vendor/fancybox/source/jquery.fancybox.pack.js"></script>
+		<link rel="stylesheet" href="js/vendor/fancybox/source/jquery.fancybox.css">
+
+		<!-- initialize fancybox when page loads -->
+		<script type="text/javascript">
+			$(document).ready(function() {
+				$(".various").fancybox();
+});
+		</script>
 
 
 	</head>
@@ -38,17 +58,18 @@
 		</div>
 
 		<div class="wrapper mid">
+
 			<div class="maxwide">
-				<div class="player-img">
 
-						<img src="http://placehold.it/1000x500">
-					</a>
-					<!--
-					<a href="http://www.vrideo.com/embed/FqIeZ7Q" data-width="1000" data-height="500" class="fancybox.iframe">
+				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">Youtube (iframe)</a>
 
-					<iframe width='640' height='400' src='http://www.vrideo.com/embed/FqIeZ7Q' scrolling='no' frameborder='0' allowfullscreen='1'></iframe>
-					-->
-				</div>
+				<a class="various fancybox.iframe" href="http://www.vrideo.com/embed/TlkD5VI">Vrideo (iframe)</a>
+				<!--
+				http://vimeo.com/47480346
+				http://www.vrideo.com/embed/TlkD5VI
+				http://www.vrideo.com/embed/FqIeZ7Q
+
+				-->
 			</div>
 		</div>
 
@@ -78,32 +99,7 @@
 		</div>
 
 
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
-		<script src="js/plugins.js"></script>
-		<script src="js/main.js"></script>
 
-		<!-- add fancy box -->
-		<script src="js/vendor/jquery.mousewheel-3.0.6.pack.js"></script>
-		<link rel="stylesheet" href="js/vendor/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-		<script src="js/vendor/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-
-		<!-- Optionally add helpers - button, thumbnail and/or media -->
-		<link rel="stylesheet" href="js/vendor/source/helpers/jquery.fancybox-buttons.css?v=1.0.5"media="screen" />
-		<script type="text/javascript" src="js/vendor/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-		<script type="text/javascript" src="js/vendor/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-
-		<link rel="stylesheet" href="js/vendor/source/helpers/jquery.fancybox-thumbs.css?v=1.0.7" type="text/css" media="screen" />
-		<script type="text/javascript" src="js/vendor/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-
-
-
-		<!-- initialize fancybox when page loads -->
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$(".fancybox").fancybox();
-			});
-		</script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>
