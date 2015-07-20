@@ -1,3 +1,49 @@
+html, body {
+	background: #181818;
+	font-family: 'Roboto Condensed', sans-serif;
+	color: #ccc;
+	height: 100%;
+}
+
+img,
+embed,
+object,
+video {
+	max-width: 100%;
+}
+
+nav, a, button {
+	min-width: 48px;
+	min-height: 48px;
+}
+
+nav {
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+	float: left;
+	margin: auto;
+	width: 100%;
+}
+
+.nav-logo {
+	float: left;
+	margin: 2px;
+}
+
+.nav-sections {
+	margin-top: 8px;
+}
+
+.img-responsive {
+	max-width: 100%;
+}
+
+.social-img {
+	max-height: 48px;
+}
+
+.nav-home,
 .nav-work,
 .nav-about,
 .nav-contact,
@@ -5,42 +51,55 @@
  {
 	color: #ddd;
 	font-size: 1.5rem;
-	margin: 0 2%;
+	margin: 2%;
 	text-decoration: none;
 }
 
-.maxwide {
+.wrapper-nav {
+	background-color: #111;
+	display: block;
+	height: 16%;
+}
+
+.wrapper-mid {
+	height: 40%;
+}
+
+.wrapper-foot
+ {
+ 	max-height: 38%;
+	background-color: #111;
+	display: block;
+}
+
+.content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.container-footer {
+	margin: auto;
+}
+
+.max-wide {
 	height: 100%;
 	width: 100%;
 }
 
-.player-img {
-	margin-left: 10%;
+.center {
+	float: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
-
-
-.one-third {
-	float: left;
-	margin: 0 2%;
-}
-
-body {
-	background: #181818;
-	font-family: 'Roboto Condensed', sans-serif;
-	color: #ccc;
-}
-
-nav {
-	text-transform: uppercase;
-	text-align: center;
-}
-
 
 #dummy {
     display: none;
 }
 
 .fancybox-inner iframe {
+	margin: auto;
     display: block;
     width: 100%;
     height: 100%;

@@ -11,22 +11,21 @@
 		<!-- Place favicon.ico in the root directory -->
 
 
-		<!--<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/main.css">-->
+		<link rel="stylesheet" href="css/normalize.css">
+		<link rel="stylesheet" href="css/main.css">
 		<link rel="stylesheet" href="css/style.css">
+		<!--<link rel="stylesheet" media="screen and (min-width: 350px)" href="css/style-medium.css">-->
+
 		<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
 		<script src="js/vendor/modernizr-2.8.3.min.js"></script>
 
-		<!--
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
 
 		<script src="js/plugins.js"></script>
 		<script src="js/main.js"></script>
-		-->
 
 		<!-- add fancybox -->
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 		<script src="js/vendor/fancybox/source/jquery.fancybox.pack.js"></script>
 		<link rel="stylesheet" href="js/vendor/fancybox/source/jquery.fancybox.css">
 
@@ -34,7 +33,7 @@
 		<script type="text/javascript">
 			$(document).ready(function() {
 				$(".various").fancybox();
-});
+		});
 		</script>
 
 
@@ -45,60 +44,64 @@
 		<![endif]-->
 
 		<!-- Add your site or application content here -->
-		<div class="wrapper nav">
-			<div class="maxwide">
+		<div class="wrapper-nav">
+			<div class="max-wide">
 				<nav>
-					<img src="img/reveal-logo-0.png" height="80" width="80" alt="Method Studios">
-					<a href="/work" class="nav-work">work</a>
-					<a href="/about" class="nav-about">about</a>
-					<a href="/contact" class="nav-contact">contact</a>
-					<a href="/news" class="nav-revelations">revelations</a>
+					<div class="nav-logo">
+						<a href="/home" class="nav-home">
+							<img src="img/reveal-logo-3.png" height="80" width="80">
+						</a>
+					</div>
+					<div class="nav-sections">
+						<a href="/work" class="nav-work">work</a>
+						<a href="/about" class="nav-about">about</a>
+						<!--<a href="/contact" class="nav-contact">contact</a>-->
+						<a href="/news" class="nav-revelations">revelations</a>
+					</div>
 				</nav>
 			</div>
 		</div>
 
-		<div class="wrapper mid">
-
-			<div class="maxwide">
-
-				<a class="various fancybox.iframe" href="http://www.youtube.com/embed/L9szn1QQfas?autoplay=1">Youtube (iframe)</a>
-
-				<a class="various fancybox.iframe" href="http://www.vrideo.com/embed/TlkD5VI">Vrideo (iframe)</a>
-				<!--
-				http://vimeo.com/47480346
-				http://www.vrideo.com/embed/TlkD5VI
-				http://www.vrideo.com/embed/FqIeZ7Q
-
-				-->
+		<div class="wrapper-mid">
+			<div class="max-wide">
+				<div class="content">
+					<a class="various fancybox.iframe" href="http://www.vrideo.com/embed/FqIeZ7Q">
+						<img class="center img-responsive" src="http://placehold.it/800x400">
+					</a>
+				</div>
 			</div>
 		</div>
 
-		<div class="wrapper foot">
-			<div class="maxwide">
-				<div class="one-third">
-					<img src="img/reveal-logo-1.png" height="160" width="160">
-				</div>
-				<div class="one-third">
+		<div class="wrapper-foot">
+				<div class="container-footer">
 					<address>
 						<h4>Los Angeles, California</h4>
 						<p>
 							For inquiries please contact<br><br>
-							P: xxx xxx-xxxx<br>
-							E: inquiries@revelvr.com<br>
+							p: xxx xxx-xxxx<br>
+							e: inquiries@revelvr.com<br>
 						</p>
 					</address>
 				</div>
-				<div class="one-third">
-					<h4>Connect with us</h4>
-					<p>
-						Fb Tw <br>
-						Vr Yt
-					</p>
+				<div class="container-footer">
+					<!-- TODO replace with our actual socail lings -->
+					<a href="https://www.facebook.com/moavy">
+						<img src="img/social-facebook.png" alt="facebook" class="social-img">
+					</a>
+
+					<a href="https://twitter.com/AlexMoaveni">
+						<img src="img/social-twitter.png" alt="twitter" class="social-img">
+					</a>
+
+					<a href="http://www.vrideo.com/CH889GjBc">
+						<img src="img/social-vrideo.png" alt="vrideo" class="social-img">
+					</a>
+
+					<a href="https://www.youtube.com/channel/UCYPoC3xpMYYb7zxfi7I7PvA">
+						<img src="img/social-youtube.png" alt="youtube" class="social-img">
+					</a>
 				</div>
-			</div>
 		</div>
-
-
 
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
