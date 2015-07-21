@@ -1,8 +1,9 @@
 html, body {
-	background: #181818;
+	background: #111;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #ccc;
 	height: 100%;
+	display: block;
 }
 
 img,
@@ -10,11 +11,15 @@ embed,
 object,
 video {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 nav, a, button {
 	min-width: 48px;
-	min-height: 48px;
+}
+
+a {
+	text-decoration: none;
 }
 
 nav {
@@ -22,13 +27,17 @@ nav {
 	text-align: center;
 	display: block;
 	float: left;
-	margin: auto;
 	width: 100%;
+	padding-bottom: 12px;
+	background-color: #111;
 }
 
 .nav-logo {
 	float: left;
-	margin: 2px;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	padding-left: 5px;
+	margin: 5px;
 }
 
 .nav-sections {
@@ -37,12 +46,17 @@ nav {
 
 .img-responsive {
 	max-width: 100%;
+	max-height: 100%;
 }
 
 .social-img {
-	max-height: 48px;
+	max-height: 36px;
+	/*padding: 12px;
+	margin: auto;*/
 }
 
+
+/*
 .nav-home,
 .nav-work,
 .nav-about,
@@ -54,32 +68,51 @@ nav {
 	margin: 2%;
 	text-decoration: none;
 }
+*/
+@media screen and (max-width: 760px) {
+	nav > a {
+		display: block;
+		color: #ccc;
+		margin: 0;
+		padding: 12px 5px;
+		text-align: left;
+		font-size: 18px;
+		border-bottom: 1px solid #222;
+		background: transparent url(../img/menu/right_arrow_24.png) no-repeat 95% 50%;
+		background-size: 16px 16px;
+	}
+
+}
 
 .wrapper-nav {
-	background-color: #111;
 	display: block;
-	height: 16%;
 }
 
 .wrapper-mid {
-	height: 40%;
-}
+	max-height: 100%;
+	margin: 0;
 
-.wrapper-foot
- {
- 	max-height: 38%;
-	background-color: #111;
-	display: block;
 }
 
 .content {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
+  height: 100%;
+
+}
+
+.various {
+	max-height: 100%;
 }
 
 .container-footer {
-	margin: auto;
+	display: block;
+}
+
+.social {
+	margin-right: calc(25% - 36px);
+}
+
+.social:last-of-type{
+	margin-right: 0;
 }
 
 .max-wide {
