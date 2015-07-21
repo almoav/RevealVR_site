@@ -1,9 +1,9 @@
-html, body {
+body {
 	background: #111;
 	font-family: 'Roboto Condensed', sans-serif;
 	color: #ccc;
 	height: 100%;
-	display: block;
+	display: inline-block;
 }
 
 img,
@@ -50,25 +50,12 @@ nav {
 }
 
 .social-img {
-	max-height: 36px;
+	max-height: 28px;
 	/*padding: 12px;
 	margin: auto;*/
 }
 
 
-/*
-.nav-home,
-.nav-work,
-.nav-about,
-.nav-contact,
-.nav-revelations
- {
-	color: #ddd;
-	font-size: 1.5rem;
-	margin: 2%;
-	text-decoration: none;
-}
-*/
 @media screen and (max-width: 760px) {
 	nav > a {
 		display: block;
@@ -84,15 +71,13 @@ nav {
 
 }
 
-.wrapper-nav {
-	display: block;
-}
-
-.wrapper-mid {
-	max-height: 100%;
+.wrapper-head,
+.wrapper-mid,
+.wrapper-footer {
+	display: inline-block;
 	margin: 0;
-
 }
+
 
 .content {
   height: 100%;
@@ -105,10 +90,15 @@ nav {
 
 .container-footer {
 	display: block;
+	text-align: center;
+	color: #555;
+	font-size: 12px;
+	padding-top: 8px;
+	padding-bottom: 8px;
 }
 
 .social {
-	margin-right: calc(25% - 36px);
+	margin-right: 5%;
 }
 
 .social:last-of-type{
