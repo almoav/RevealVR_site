@@ -4,6 +4,7 @@ body {
 	color: #ccc;
 	height: 100%;
 	display: inline-block;
+	width: 100%;
 }
 
 img,
@@ -32,22 +33,82 @@ nav {
 	background-color: #111;
 }
 
-nav > a {
-	display: block;
+nav a {
 	color: #ccc;
-	margin: 0;
-	padding: 12px 10px;
-	text-align: left;
+	padding: 0 5%;
 	font-size: 18px;
-	border-bottom: 1px solid #222;
-	background: transparent url(../img/menu/right_arrow_24.png) no-repeat 95% 50%;
-	background-size: 16px 16px;
+	border-right: 1px solid #222;
 }
 
-.nav-logo {
-	float: left;
-	padding: 10px;
+
+
+.justify {
+	text-align: center;
+	padding-top: 20px;
 }
+
+@media screen and (max-width: 499px) {
+	/*
+		mobile size
+	*/
+	div.wrapper-head .justify {
+		display: none;
+	}
+
+	nav > a {
+		display: block;
+		text-align: left;
+		padding: 12px 10px;
+		margin: 0;
+		border-bottom: 1px solid #222;
+		background: transparent url(../img/menu/right_arrow_24.png) no-repeat 95% 50%;
+		background-size: 16px 16px;
+	}
+
+	.social {
+		margin-right: 5%;
+	}
+
+	.container-footer {
+		padding-top: 8px;
+	}
+
+	.nav-logo {
+		float: left;
+		padding-top: 10px;
+		padding-left: 10px;
+	}
+
+}
+
+@media screen and (min-width: 500px) {
+	/*
+		full size
+	*/
+	div.wrapper-mid > .container-nav {
+		display: none;
+	}
+
+	nav a:last-of-type {
+		border: none;
+	}
+
+	.social {
+		margin-right: 1%;
+	}
+
+	.container-footer {
+		padding-top: 36px;
+	}
+
+	.nav-logo {
+		float: left;
+		padding-top: 14px;
+		padding-left: 11px;
+	}
+}
+
+
 
 .nav-sections {
 	margin-top: 8px;
@@ -60,8 +121,6 @@ nav > a {
 
 .social-img {
 	max-height: 28px;
-	/*padding: 12px;
-	margin: auto;*/
 }
 
 .wrapper-head,
@@ -69,6 +128,8 @@ nav > a {
 .wrapper-footer {
 	display: inline-block;
 	margin: 0;
+	width: 100%;
+	text-align: center;
 }
 
 .content {
@@ -80,17 +141,19 @@ nav > a {
 	max-height: 100%;
 }
 
+.container-nav {
+	display: inline-block;
+	width: 100%;
+	max-width: 650px;
+	text-align: center;
+}
+
 .container-footer {
 	display: block;
 	text-align: center;
 	color: #555;
 	font-size: 12px;
-	padding-top: 8px;
 	padding-bottom: 8px;
-}
-
-.social {
-	margin-right: 5%;
 }
 
 .social:last-of-type{
