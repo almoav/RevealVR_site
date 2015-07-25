@@ -43,21 +43,22 @@
 			<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
 
-		<!-- Add your site or application content here -->
-
+		<!-- top header content -->
 		<div class="wrapper-head">
 			<div class="container-nav">
 				<nav>
 					<div class="nav-logo">
-						<a href="/home" class="nav-home">
+						<a href="#" class="nav-home">
 							<img src="img/logo-white.png" height="36" width="36">
 						</a>
 					</div>
+					<!-- top, desktop navigation menu -->
 					<div class="justify">
-						<a href="404.html" class="nav-work">work</a>
-						<a href="404.html" class="nav-about">about</a>
-						<a href="404.html" class="nav-contact">contact</a>
-						<a href="404.html" class="nav-blog">blog</a>
+						<a href="#" class="nav-work">work</a>
+						<a href="#" class="nav-about">about</a>
+						<a href="#" class="nav-faq">FAQ</a>
+						<a href="#" class="nav-contact">contact</a>
+						<a href="#" class="nav-blog">blog</a>
 					</div>
 				</nav>
 			</div>
@@ -65,25 +66,68 @@
 		</div><br>
 
 
-
+		<!-- mid, css visibility controlled content -->
 		<div class="wrapper-mid">
-			<div class="content">
-				<a class="various fancybox.iframe" href="http://www.vrideo.com/embed/AoW0cGy">
-					<img class="center img-responsive" src="img/thumbs/content-placeholder.jpg">
-				</a>
+
+			<!-- home page demo video -->
+			<div class="content home hidden">
+
+				<iframe frameborder="0" allowfullscreen="1" title="YouTube video player" width="940" height="560" src="https://www.youtube.com/embed/LD4XfM2TZ2k" color="red" controls="1" rel="0" showinfo="0" fs="1" wmode="opaque" html5="1" enablejsapi="1" id="widget2"></iframe>
+
 			</div>
 
+			<!-- work page video gallery -->
+			<div class="content work">
+				<p>
+					work nothing here yet!
+				</p>
+			</div>
+
+			<!-- about page content -->
+			<div class="content about">
+				<p>
+				Reveal VR is a Los Angeles based virtual reality video production agency specializing in 360 degree virtual tours for real estate, hospitality, venues and special events. <br><br>
+
+				Founded by two veteran visual effects technical directors from industry-leading studios, we bring our experience creating professional quality content to the exciting new world of virtual reality and immersive video.<br><br>
+
+				With virtual reality on the cusp of mainstream adoption we offer professional video production for a reasonable rate to help our clients stay ahead of the curve.
+				</p>
+			</div>
+
+			<!-- faq page content -->
+			<div class="content faq">
+				<p>
+					faq nothing here yet!
+				</p>
+			</div>
+
+			<!-- contact page content -->
+			<div class="content contact">
+				<p>
+					contact nothing here yet!
+				</p>
+			</div>
+
+			<!-- blog page content -->
+			<div class="content blog">
+				<p>
+					blog nothing here yet!
+				</p>
+			</div>
+
+			<!-- Mobile navigation area -->
 			<div class="container-nav">
 				<nav>
-					<a href="404.html" class="nav-work">work</a>
-					<a href="404.html" class="nav-about">about</a>
-					<a href="404.html" class="nav-contact">contact</a>
-					<a href="404.html" class="nav-blog">blog</a>
+					<a href="#" class="nav-work">work</a>
+					<a href="#" class="nav-about">about</a>
+					<a href="#" class="nav-faq">FAQ</a>
+					<a href="#" class="nav-contact">contact</a>
+					<a href="#" class="nav-blog">blog</a>
 				</nav>
 			</div>
 		</div>
 
-
+		<!-- footer content -->
 		<div class="wrapper-foot">
 			<div class="container-footer">
 				<!-- TODO replace with our actual socail lings -->
@@ -104,13 +148,8 @@
 			</div>
 		</div>
 
-
-
-
-
-
-
-
+		<script src="js/vendor/knockout-3.3.0.min.js"></script>
+		<script src="js/viewModel.js"></script>
 
 		<!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
 		<script>

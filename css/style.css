@@ -10,7 +10,8 @@ body {
 img,
 embed,
 object,
-video {
+video,
+iframe {
 	max-width: 100%;
 	max-height: 100%;
 }
@@ -40,7 +41,15 @@ nav a {
 	border-right: 1px solid #222;
 }
 
+.about {
+	max-width: 600px;
+	margin: auto;
+	text-align: justify;
+}
 
+.hidden {
+	display: none;
+}
 
 .justify {
 	text-align: center;
