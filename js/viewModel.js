@@ -5,7 +5,6 @@ $(".nav-home").click(function() {
 	showSection($(".home"));
 });
 
-
 $(".nav-work").click(function() {
 	showSection($(".work"));
 });
@@ -27,7 +26,6 @@ $(".nav-blog").click(function() {
 });
 
 var showSection = function(element) {
-	console.log(this);
 	$(".content").toggleClass("hidden", true);
 	element.toggleClass("hidden", false);
 };
@@ -44,3 +42,6 @@ ViewModel = function() {
 };
 
 ko.applyBindings(new ViewModel());
+
+// start the page on home page content
+showSection($(".home"));
