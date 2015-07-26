@@ -1,5 +1,45 @@
 // view model script controls swapping of mid wrapper content
 
+var videoGallery = [
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/NdZ02-Qenso",
+		"title" : "Fighter Jet"
+	},
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/edcJ_JNeyhg",
+		"title" : "Waiting for Love"
+	},
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/_-kviywORqA",
+		"title" : "Cliff Jump"
+	},
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/Xnd8ERrynEo",
+		"title" : "Lambo Ride"
+	},
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/t99N223fqCo",
+		"title" : "Wingsuit"
+	},
+	{
+		"img" : "http://placehold.it/195x112",
+		"src" : "https://www.youtube.com/embed/2OzlksZBTiA",
+		"title" : "Scuba"
+	},
+];
+
+
+var Video = function(data) {
+	this.img = ko.observable(data.img);
+	this.src = ko.observable(data.src);
+	this.title = ko.observable(data.title);
+};
+
 
 $(".nav-home").click(function() {
 	showSection($(".home"));
@@ -30,18 +70,33 @@ var showSection = function(element) {
 	element.toggleClass("hidden", false);
 };
 
-Content = function(data) {
-	// stores the inner html for the different mid content containers
-	var self = this;
-
-}
+$(".faq-question").click(function() {
+	//console.log($(this).children());
+	$(this).children(".faq-answer").toggleClass("hidden");
+});
 
 
 ViewModel = function() {
 	var self = this;
+	this.galleryVideos = ko.observableArray();
+
+	videoGallery.forEach( function(item) {
+		self.galleryVideos.push( new Video(item) );
+	});
+
+	this.currentVideo = ko.observable( this.galleryVideos()[0] );
+
+	this.videoSource = ko.computed(function() {
+		return self.currentVideo().src()+"?autoplay=0&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1"
+	});
+
+	this.loadVideo = function() {
+		self.currentVideo(this)
+	};
 };
+
 
 ko.applyBindings(new ViewModel());
 
 // start the page on home page content
-showSection($(".home"));
+showSection($(".work"));

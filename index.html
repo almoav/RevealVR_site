@@ -29,7 +29,7 @@
 			<div class="container-nav">
 				<nav>
 					<a class="nav-home">
-						<img src="img/logo-white.png" height="80" width="80">
+						<img src="img/logo-black.png" height="131" width="136">
 					</a>
 					<a class="nav-work">work</a>
 					<a class="nav-about">about</a>
@@ -45,7 +45,7 @@
 		<div class="wrapper-mid">
 
 			<!-- home page demo video -->
-			<div class="content home">
+			<div class="content home hidden">
 				<div class="section-title">
 					<div class="line"></div>
 					<div class="title">virtual reality video production agency</div>
@@ -53,47 +53,27 @@
 				</div>
 
 				<div class="video-container">
-					<iframe frameborder="0" allowfullscreen="1" width="640" height="480" src="https://www.youtube.com/embed/LD4XfM2TZ2k" showinfo="0" fs="1" html5="1" scale="aspect"></iframe>
+					<iframe width="640" height="480" src="https://www.youtube.com/embed/LD4XfM2TZ2k?autoplay=0&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1" frameborder="0" allowfullscreen></iframe>
 				</div>
 			</div>
 
 			<!-- work page video gallery -->
-			<div class="content work">
+			<div class="content work hidden">
 				<div class="video-container">
-					<iframe frameborder="0" allowfullscreen="1" width="640" height="480" src="https://www.youtube.com/embed/0RPurvYriHI" showinfo="0" fs="1" html5="1" scale="aspect"></iframe>
+					<iframe data-bind="attr: {src: videoSource}" width="640" height="480" allowfullscreen></iframe>
 				</div>
 
-				<!-- row one -->
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 1</span>
-				</div>
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 2</span>
-				</div>
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 3</span>
+				<div data-bind="foreach: galleryVideos">
+					<div class="gallery-img">
+						<img data-bind="click: $parent.loadVideo, attr: { src: img, alt: 'image'}">
+						<span data-bind="text: $data.title"></span>
+					</div>
 				</div>
 
-				<!-- row two -->
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 4</span>
-				</div>
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 5</span>
-				</div>
-				<div class="gallery-img">
-					<img src="http://placehold.it/195x112">
-					<span>example 6</span>
-				</div>
 			</div>
 
 			<!-- about page content -->
-			<div class="content about">
+			<div class="content about hidden">
 
 				<div class="company">
 					<div class="section-title">
@@ -101,7 +81,7 @@
 						<div class="title">About Reveal VR</div>
 						<div class="line"></div>
 					</div>
-					<p>
+					<p class="text-med">
 					Reveal VR is a Los Angeles based virtual reality video production agency specializing in 360 degree virtual tours for real estate, hospitality, venues and special events. <br><br>
 					Founded by two veteran visual effects technical directors from industry-leading studios, we bring our experience creating professional quality content to the exciting new world of virtual reality and immersive video.<br><br>
 					With virtual reality on the cusp of mainstream adoption we offer professional VR video production for a reasonable rate to help our clients stay ahead of the curve.
@@ -117,13 +97,13 @@
 					<div class="wrapper-personal">
 						<div class="personal">
 							<img src="http://placehold.it/280x320">
-							<p>
+							<p class="text-med">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, nisi? Veritatis, quo corporis vitae totam eligendi, eos ipsam doloribus. Unde, accusantium, soluta voluptatem facere neque animi nesciunt numquam itaque velit.
 							</p>
 						</div>
 						<div class="personal">
 							<img src="http://placehold.it/280x320">
-							<p>
+							<p class="text-med">
 								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perspiciatis modi officia dolorum et quos dicta quas laborum facilis error voluptate, reprehenderit rerum aliquid eum repellendus porro sequi molestiae totam ipsa!
 							</p>
 						</div>
@@ -132,21 +112,268 @@
 			</div>
 
 			<!-- faq page content -->
-			<div class="content faq">
-				<p>
-					faq nothing here yet!
-				</p>
+			<div class="content faq hidden">
+				<!-- company questions -->
+				<div class="faq-section">
+					<div class="section-title">
+						<div class="line"></div>
+						<div class="title">Company</div>
+						<div class="line"></div>
+					</div>
+					<div class="faq-question">
+						<span>
+						What is Reveal VR?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							Reveal VR is a virtual reality video production agency specializing in 360 degree virtual tours for real estate, hospitality, venues and special events.  We are located in Los Angeles.
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						What is a 360 video?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Why should I use a Virtual Reality service?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Are 360 videos just a gimmick?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Can I arrange a meeting with you?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Do you have an office?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- payment questions -->
+				<div class="faq-section">
+					<div class="section-title">
+						<div class="line"></div>
+						<div class="title">Payment</div>
+						<div class="line"></div>
+					</div>
+					<div class="faq-question">
+						<span>
+						How much do you charge?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						What forms of payment do you accept?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Do I have to pay a deposit?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- technical questions -->
+				<div class="faq-section">
+					<div class="section-title">
+						<div class="line"></div>
+						<div class="title">Technical</div>
+						<div class="line"></div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Can the videos be viewed without a virtual reality headset?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Will the videos work with my VR headset?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						What kind of equipment do you use?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- production questions -->
+				<div class="faq-section">
+					<div class="section-title">
+						<div class="line"></div>
+						<div class="title">Production</div>
+						<div class="line"></div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Will production disrupt my business?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						How many people does it take to film?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						How long will it take to shoot my video?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+				</div>
+				<!-- final product questions -->
+				<div class="faq-section">
+					<div class="section-title">
+						<div class="line"></div>
+						<div class="title">Final Product</div>
+						<div class="line"></div>
+					</div>
+					<div class="faq-question">
+						<span>
+						How long will it take to receive my video?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						What kind of editing do you do?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Where will my video be hosted?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Do I own the rights to my video?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						Can I embed my video on my own website?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+					<div class="faq-question">
+						<span>
+						How is my video delivered?
+						</span>
+						<div class="faq-answer hidden">
+							<span>
+							answer
+							</span>
+						</div>
+					</div>
+				</div>
 			</div>
 
 			<!-- contact page content -->
-			<div class="content contact">
-				<p>
-					contact nothing here yet!
-				</p>
+			<div class="content contact hidden">
+				<span>
+				Phone: 424 543-4372 <br>
+				Email: <a href="mailto:inquiry@revealvr.com">inquiry@revealvr.com</a><br>
 			</div>
 
 			<!-- blog page content -->
-			<div class="content blog">
+			<div class="content blog hidden">
 				<p>
 					blog nothing here yet!
 				</p>
