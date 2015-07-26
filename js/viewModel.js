@@ -1,5 +1,6 @@
 // view model script controls swapping of mid wrapper content
 
+// these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
 		"img" : "http://placehold.it/195x112",
@@ -28,8 +29,8 @@ var videoGallery = [
 	},
 	{
 		"img" : "http://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/2OzlksZBTiA",
-		"title" : "Scuba"
+		"src" : "https://www.youtube.com/embed/LD4XfM2TZ2k",
+		"title" : "Le Mans"
 	},
 ];
 
@@ -70,6 +71,8 @@ var showSection = function(element) {
 	element.toggleClass("hidden", false);
 };
 
+
+// hide all the FAQ answers
 $(".faq-question").click(function() {
 	//console.log($(this).children());
 	$(this).children(".faq-answer").toggleClass("hidden");
@@ -99,4 +102,4 @@ ViewModel = function() {
 ko.applyBindings(new ViewModel());
 
 // start the page on home page content
-showSection($(".work"));
+showSection($(".home"));
