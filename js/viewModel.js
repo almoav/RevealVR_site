@@ -66,19 +66,26 @@ $(".nav-blog").click(function() {
 	showSection($(".blog"));
 });
 
-var showSection = function(element) {
-	$(".content").toggleClass("hidden", true);
-	element.toggleClass("hidden", false);
-};
+// set the default displayed content
+var currentContent = $(".home");
 
+// fades between content
+var showSection = function(element) {
+	if (element.selector != currentContent.selector) {
+		currentContent.fadeOut(400, function() {
+			element.fadeIn(400);
+			currentContent = element;
+		});
+	}
+
+};
 
 // hide all the FAQ answers
 $(".faq-question").click(function() {
-	//console.log($(this).children());
-	$(this).children(".faq-answer").toggleClass("hidden");
+	$(this).children(".faq-answer").slideToggle(200);
 });
 
-
+// used for loading videos into a single view
 ViewModel = function() {
 	var self = this;
 	this.galleryVideos = ko.observableArray();

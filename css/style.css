@@ -180,12 +180,16 @@ nav a {
 	margin-top: 8px;
 }
 
+.wrapper-all {
+	text-align: center;
+}
+
 .wrapper-head,
 .wrapper-mid,
 .wrapper-footer {
 	display: inline-block;
 	margin: 0;
-	width: 100%;
+	width: 90%;
 	text-align: center;
 }
 
@@ -253,11 +257,15 @@ nav a {
 }
 
 .personal {
-	padding-bottom: 3%;
+	padding-bottom: 18px;
 }
 
 .personal:last-of-type {
 	padding-right: 0;
+}
+
+.personal > img {
+	width: 100%;
 }
 
 .personal > p {
@@ -308,6 +316,7 @@ nav a {
 }
 
 .faq-answer {
+	display: none;
 	font-size: 0.85em;
 	color: #222;
 	position: relative;
@@ -351,3 +360,11 @@ nav a {
 
 
 /* animations */
+.work,
+.about,
+.faq,
+.contact,
+.blog {
+	display: none;
+}
+
