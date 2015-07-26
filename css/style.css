@@ -87,7 +87,7 @@ nav a {
 	}
 
 	.line {
-		max-width: 5%;
+		max-width: 2%;
 	}
 
 	.social {
@@ -222,7 +222,7 @@ nav a {
 	border-bottom: 1px solid #222;
 	width: 250px;
 	position: relative;
-	bottom: 0.25em;
+	bottom: 0.15em;
 }
 
 .wrapper-personal {
@@ -243,7 +243,7 @@ nav a {
 
 .container-nav {
 	display: inline-block;
-	width: 90%;
+	width: 100%;
 	max-width: 650px;
 	text-align: center;
 }

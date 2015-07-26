@@ -101,7 +101,8 @@ ViewModel = function() {
 	});
 
 	this.loadVideo = function() {
-		self.currentVideo(this)
+		self.currentVideo(this);
+		$('html, body').animate({ scrollTop: 0 }, 'fast');
 	};
 };
 
