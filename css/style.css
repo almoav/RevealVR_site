@@ -53,6 +53,10 @@ nav a {
 	/*
 		mobile size
 	*/
+	.logo-round {
+		display: none;
+	}
+
 	.wrapper-all {
 		background-color: #eee;
 	}
@@ -77,9 +81,9 @@ nav a {
 		text-align: center;
 	}
 
-	.nav-home > img {
-		width: 48px;
-		height: 48px;
+	.nav-home img {
+		padding-top: 4px;
+		padding-bottom: 4px;
 	}
 
 	.wrapper-head {
@@ -106,6 +110,10 @@ nav a {
 	/*
 		full size
 	*/
+	.logo-rect {
+		display: none;
+	}
+
 	.wrapper-all {
 		background-color: #eee;
 		max-width: 760px;
@@ -198,7 +206,7 @@ nav a {
 	margin: auto;
 	/*padding-top: 36px;*/
 	padding-left: 1%;
-	padding-right: 1%
+	padding-right: 1%;
 	text-align: justify;
 	display: block;
 }
@@ -216,6 +224,12 @@ nav a {
 .section-title > div {
 	display: inline-block;
 	font-size: 1.25em;
+}
+
+.faq .section-title {
+	font-size: 1.25em;
+	text-align: left;
+	margin-top: 12px;
 }
 
 .line {

@@ -35,12 +35,43 @@ var videoGallery = [
 ];
 
 
+var faqSections = [],
+	key,
+	sectionTitle,
+	questionsArray,
+	question,
+	answer;
+
+FAQS.forEach( function(obj) {
+	//console.log(obj);
+	for (key in obj) {
+		sectionTitle = key; // section title
+
+		// append the question section
+		$('.faq').append('<div class="section-title">'+key+'</div>');
+
+		questionsArray = obj[key]; // array of questions
+		questionsArray.forEach( function(q) {
+			// append the q + a to the dom
+			$('.faq').append('<div class="faq-question">'+q.q+'</div>');
+			$('.faq-question:last').append('<div class="faq-answer">'+q.a+'</div>')
+		})
+	}
+
+});
+
+
+
 var Video = function(data) {
 	this.img = ko.observable(data.img);
 	this.src = ko.observable(data.src);
 	this.title = ko.observable(data.title);
 };
 
+var Faq = function(data) {
+	this.question = ko.observable(data.q);
+	this.answer = ko.observable(data.a);
+};
 
 $(".nav-home").click(function() {
 	showSection($(".home"));
@@ -80,7 +111,7 @@ var showSection = function(element) {
 
 };
 
-// hide all the FAQ answers
+// unhide/hide all the FAQ answers
 $(".faq-question").click(function() {
 	$(this).children(".faq-answer").slideToggle(200);
 });
@@ -89,9 +120,14 @@ $(".faq-question").click(function() {
 ViewModel = function() {
 	var self = this;
 	this.galleryVideos = ko.observableArray();
+	this.faQuestions = ko.observableArray();
 
 	videoGallery.forEach( function(item) {
 		self.galleryVideos.push( new Video(item) );
+	});
+
+	FAQS.forEach( function(item) {
+		self.faQuestions.push( new Faq(item) );
 	});
 
 	this.currentVideo = ko.observable( this.galleryVideos()[0] );
@@ -108,6 +144,9 @@ ViewModel = function() {
 
 
 ko.applyBindings(new ViewModel());
+
+
+
 
 // start the page on home page content
 showSection($(".home"));
