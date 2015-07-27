@@ -8,9 +8,20 @@ body {
 	width: 100%;
 }
 
+html,
+body {
+	height: 100%;
+}
+
+.wallpaper,
+.wrapper-all {
+	min-height: 100%;
+}
+
 .wallpaper {
 	background: transparent url(../img/bkg/60-lines.png);
 }
+
 
 img,
 embed,
@@ -116,7 +127,7 @@ nav a {
 
 	.wrapper-all {
 		background-color: #eee;
-		max-width: 760px;
+		max-width: 900px;
 		margin: auto;
 		box-shadow: 0 0 4px #999;
 	}
@@ -152,6 +163,7 @@ nav a {
 		max-width: 45%;
 		padding-right: 3%;
 		display: inline-block;
+		vertical-align: top;
 	}
 
 	.line {
@@ -249,7 +261,7 @@ nav a {
 
 .content {
   width: 95%;
-  max-width: 650px;
+  max-width: 720px;
   height: 100%;
   margin: auto;
 
@@ -267,7 +279,7 @@ nav a {
 	text-align: center;
 	color: #555;
 	font-size: 12px;
-	padding-bottom: 8px;
+	padding-bottom: 36px;
 }
 
 .personal {
@@ -279,11 +291,13 @@ nav a {
 }
 
 .personal > img {
-	width: 100%;
+	max-width: 100%;
+	max-width: 280px;
+	max-height: 320px;
 }
 
 .personal > p {
-	text-align: center;
+	text-align: justify;
 }
 
 .home .title {

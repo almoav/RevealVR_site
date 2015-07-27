@@ -142,11 +142,7 @@ ViewModel = function() {
 	};
 };
 
-
 ko.applyBindings(new ViewModel());
-
-
-
 
 // start the page on home page content
 showSection($(".home"));
