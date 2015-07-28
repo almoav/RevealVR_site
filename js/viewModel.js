@@ -146,3 +146,11 @@ ko.applyBindings(new ViewModel());
 
 // start the page on home page content
 showSection($(".home"));
+
+
+// fades out the page load screen once window is loaded
+$( window ).load(function() {
+	$('.loader').fadeOut(400, function() {
+		$('.wallpaper').fadeIn(400);
+	});
+});
