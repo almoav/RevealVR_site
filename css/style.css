@@ -13,20 +13,6 @@ body {
 	height: 100%;
 }
 
-/* hide the body content until window is done loading */
-.loader {
-	padding-top: 25%;
-	text-align: center;
-}
-
-.loader img {
-	margin: auto;
-}
-
-.wallpaper {
-	display: none;
-}
-
 .wallpaper,
 .wrapper-all {
 	min-height: 100%;

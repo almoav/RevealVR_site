@@ -3,36 +3,42 @@
 // these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/NdZ02-Qenso",
 		"title" : "Fighter Jet"
 	},
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/edcJ_JNeyhg",
 		"title" : "Waiting for Love"
 	},
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/_-kviywORqA",
 		"title" : "Cliff Jump"
 	},
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/Xnd8ERrynEo",
 		"title" : "Lambo Ride"
 	},
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/t99N223fqCo",
 		"title" : "Wingsuit"
 	},
 	{
-		"img" : "http://placehold.it/195x112",
+		"img" : "https://placehold.it/195x112",
 		"src" : "https://www.youtube.com/embed/LD4XfM2TZ2k",
 		"title" : "Le Mans"
 	},
 ];
+
+var reelVideo = {
+	"img" : "",
+	"src" : "https://www.youtube.com/embed/2OzlksZBTiA",
+	"title" : "reel"
+}
 
 
 var faqSections = [],
@@ -103,12 +109,19 @@ var currentContent = $(".home");
 // fades between content
 var showSection = function(element) {
 	if (element.selector != currentContent.selector) {
+		// stop any playing video
+		var iframes = document.getElementsByTagName("iframe");
+
+		for (i=0; i<2; i++) {
+			iframes[i].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+		}
+
+		// crossfade to new content
 		currentContent.fadeOut(400, function() {
 			element.fadeIn(400);
 			currentContent = element;
 		});
 	}
-
 };
 
 // unhide/hide all the FAQ answers
@@ -119,6 +132,8 @@ $(".faq-question").click(function() {
 // used for loading videos into a single view
 ViewModel = function() {
 	var self = this;
+	var ytEmbedCode = "?enablejsapi=1&amp;showinfo=0&amp;theme=light&amp;html5=1&amp;origin=https%3A%2F%2F59d36308.ngrok.io"
+
 	this.galleryVideos = ko.observableArray();
 	this.faQuestions = ko.observableArray();
 
@@ -130,16 +145,24 @@ ViewModel = function() {
 		self.faQuestions.push( new Faq(item) );
 	});
 
+	this.reelVideo = ko.observable( new Video(reelVideo) );
+
 	this.currentVideo = ko.observable( this.galleryVideos()[0] );
 
+	this.reelSource = ko.computed(function() {
+		return self.reelVideo().src() + ytEmbedCode;
+	});
+
 	this.videoSource = ko.computed(function() {
-		return self.currentVideo().src()+"?autoplay=0&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1"
+		//return self.currentVideo().src()+"?autoplay=0&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1&amp;enablejsapi=1"
+		return self.currentVideo().src() + ytEmbedCode;
 	});
 
 	this.loadVideo = function() {
 		self.currentVideo(this);
 		$('html, body').animate({ scrollTop: 0 }, 'fast');
 	};
+
 };
 
 ko.applyBindings(new ViewModel());
@@ -147,10 +170,3 @@ ko.applyBindings(new ViewModel());
 // start the page on home page content
 showSection($(".home"));
 
-
-// fades out the page load screen once window is loaded
-$( window ).load(function() {
-	$('.loader').fadeOut(400, function() {
-		$('.wallpaper').fadeIn(400);
-	});
-});
