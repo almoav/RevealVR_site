@@ -4,18 +4,18 @@
 var videoGallery = [
 	{
 		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/NdZ02-Qenso",
-		"title" : "Fighter Jet"
+		"src" : "https://www.youtube.com/embed/f3wbwUgxotM",
+		"title" : "Ciclavia LA"
 	},
 	{
 		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/edcJ_JNeyhg",
-		"title" : "Waiting for Love"
+		"src" : "https://www.youtube.com/embed/NZTdGgeiIfI",
+		"title" : "Ciclavia LA pt. 2"
 	},
 	{
 		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/_-kviywORqA",
-		"title" : "Cliff Jump"
+		"src" : "https://www.youtube.com/embed/yZxUejwcRiE",
+		"title" : "Culver City at night"
 	},
 	{
 		"img" : "https://placehold.it/195x112",
@@ -36,7 +36,7 @@ var videoGallery = [
 
 var reelVideo = {
 	"img" : "",
-	"src" : "https://www.youtube.com/embed/2OzlksZBTiA",
+	"src" : "https://www.youtube.com/embed/f3wbwUgxotM",
 	"title" : "reel"
 }
 
