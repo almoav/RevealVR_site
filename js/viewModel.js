@@ -110,9 +110,10 @@ var showSection = function(element) {
 	if (element.selector != currentContent.selector) {
 		// stop any playing video
 		var iframes = document.getElementsByTagName("iframe");
+		var len = iframes.length;
 
-		for (i=0; i<2; i++) {
-			iframes[i].contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}','*');
+		for (i=0; i< len; i++) {
+			iframes[i].contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}','*');
 		}
 
 		// crossfade to new content
@@ -131,7 +132,7 @@ $(".faq-question").click(function() {
 // used for loading videos into a single view
 ViewModel = function() {
 	var self = this;
-	var ytEmbedCode = "?enablejsapi=1&amp;showinfo=0&amp;theme=light&amp;html5=1&amp;origin=https%3A%2F%2F59d36308.ngrok.io"
+	var ytEmbedCode = "?enablejsapi=1&amp;showinfo=0&amp;theme=light&amp;html5=1";
 
 	this.galleryVideos = ko.observableArray();
 	this.faQuestions = ko.observableArray();
@@ -153,7 +154,6 @@ ViewModel = function() {
 	});
 
 	this.videoSource = ko.computed(function() {
-		//return self.currentVideo().src()+"?autoplay=0&amp;controls=1&amp;rel=0&amp;showinfo=0&amp;fs=1&amp;theme=light&amp;wmode=opaque&amp;html5=1&amp;enablejsapi=1"
 		return self.currentVideo().src() + ytEmbedCode;
 	});
 
