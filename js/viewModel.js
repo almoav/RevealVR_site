@@ -3,41 +3,34 @@
 // these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/f3wbwUgxotM",
-		"title" : "Ciclavia LA"
+		"id" : "SnhR3jfB7Ig",
+		"title" : "Staples Center"
 	},
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/NZTdGgeiIfI",
-		"title" : "Ciclavia LA pt. 2"
+		"id" : "AoAck2sPh_4",
+		"title" : "Expo Line"
 	},
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/yZxUejwcRiE",
-		"title" : "Culver City at night"
+		"id" : "xGZp9grFAPM",
+		"title" : "Wilshire / Figueroa"
 	},
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/Xnd8ERrynEo",
-		"title" : "Lambo Ride"
+		"id" : "NZTdGgeiIfI",
+		"title" : "Ciclavia, Hughes / Washington"
 	},
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/t99N223fqCo",
-		"title" : "Wingsuit"
+		"id" : "Go-MnGtr-XU",
+		"title" : "Night Test"
 	},
 	{
-		"img" : "https://placehold.it/195x112",
-		"src" : "https://www.youtube.com/embed/LD4XfM2TZ2k",
-		"title" : "Le Mans"
+		"id" : "QYQjQvbBrHU",
+		"title" : "Expo / Blue lines"
 	},
 ];
 
 var reelVideo = {
-	"img" : "",
-	"src" : "https://www.youtube.com/embed/f3wbwUgxotM",
-	"title" : "reel"
+	"id" : "Y2GoQzXevIA",
+	"title" : "DTLA Reel"
 }
 
 
@@ -69,8 +62,14 @@ FAQS.forEach( function(obj) {
 
 
 var Video = function(data) {
-	this.img = ko.observable(data.img);
-	this.src = ko.observable(data.src);
+	this.img = ko.computed( function() {
+		// this is the tumbnail that YouTube provides
+		return "http://img.youtube.com/vi/" + data.id + "/0.jpg";
+	});
+	this.src = ko.computed( function() {
+		// this is the embeded video source
+		return "https://www.youtube.com/embed/" + data.id;
+	});
 	this.title = ko.observable(data.title);
 };
 
