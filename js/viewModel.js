@@ -3,34 +3,34 @@
 // these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
-		"id" : "SnhR3jfB7Ig",
+		"id" : "MnhQVhKA63w",
 		"title" : "Staples Center"
 	},
 	{
-		"id" : "AoAck2sPh_4",
+		"id" : "9u1qs40wQMQ",
 		"title" : "Expo Line"
 	},
 	{
-		"id" : "xGZp9grFAPM",
+		"id" : "kwsJRtugpnE",
 		"title" : "Wilshire / Figueroa"
 	},
 	{
-		"id" : "NZTdGgeiIfI",
-		"title" : "Ciclavia, Hughes / Washington"
+		"id" : "17YiCHBwqqU",
+		"title" : "First Bank"
 	},
 	{
-		"id" : "Go-MnGtr-XU",
-		"title" : "Night Test"
+		"id" : "qJYyd95M5HE",
+		"title" : "D*Face"
 	},
 	{
-		"id" : "QYQjQvbBrHU",
-		"title" : "Expo / Blue lines"
+		"id" : "hE0M7SAyNig",
+		"title" : "Expo + Blue Lines"
 	},
 ];
 
 var reelVideo = {
-	"id" : "Y2GoQzXevIA",
-	"title" : "DTLA Reel"
+	"id" : "TNdcIALyTvM",
+	"title" : "DTLA Tour"
 }
 
 
