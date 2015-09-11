@@ -3,6 +3,22 @@
 // these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
+		"id" : "3LjvbWORVk0",
+		"title" : "Carlsbad Beach"
+	},
+	{
+		"id" : "dkL6Fm1Bu5M",
+		"title" : "Duck Pond"
+	},
+	{
+		"id" : "QR1E_8jBLAM",
+		"title" : "Montana Horses"
+	},
+			{
+		"id" : "yzj2oxieTYQ",
+		"title" : "DTLA"
+	},
+	{
 		"id" : "MnhQVhKA63w",
 		"title" : "Staples Center"
 	},
@@ -13,10 +29,6 @@ var videoGallery = [
 	{
 		"id" : "kwsJRtugpnE",
 		"title" : "Wilshire / Figueroa"
-	},
-	{
-		"id" : "17YiCHBwqqU",
-		"title" : "First Bank"
 	},
 	{
 		"id" : "qJYyd95M5HE",
