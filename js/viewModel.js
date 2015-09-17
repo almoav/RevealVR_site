@@ -3,8 +3,8 @@
 // these are all placeholder videos, we didn't shoot any of them
 var videoGallery = [
 	{
-		"id" : "3LjvbWORVk0",
-		"title" : "Carlsbad Beach"
+		"id" : "binDNJ88GaI",
+		"title" : "Carlsbad Village"
 	},
 	{
 		"id" : "dkL6Fm1Bu5M",
